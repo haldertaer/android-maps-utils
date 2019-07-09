@@ -839,13 +839,16 @@ public class DefaultClusterRenderer<T extends ClusterItem> implements ClusterRen
                         } else {
                             markerOptions.position(item.getPosition());
                         }
-                        if (!(item.getTitle()== null) && !(item.getSnippet() == null)) {
+                        if (!(item.getTitle()== null) && !(item.getSnippet() == null) && !(item.getUID() == null)) {
                             markerOptions.title(item.getTitle());
                             markerOptions.snippet(item.getSnippet());
+                            markerOptions.UID(item.getUID());
                         } else if (!(item.getSnippet() == null)) {
                             markerOptions.title(item.getSnippet());
                         } else if (!(item.getTitle() == null)) {
                             markerOptions.title(item.getTitle());
+                        } else if (!(item.getUID() == null)) {
+                            markerOptions.UID(item.getUID());
                         }
                         onBeforeClusterItemRendered(item, markerOptions);
                         marker = mClusterManager.getMarkerCollection().addMarker(markerOptions);
