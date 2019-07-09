@@ -219,6 +219,30 @@ public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
         mMarkerOptions.snippet(snippet);
         styleChanged();
     }
+    
+    
+    
+    
+        /**
+     * Gets the UID of the GeoJsonPoint
+     *
+     * @return UID of the GeoJsonPoint
+     */
+    public String getUID() {
+        return mMarkerOptions.getUID();
+    }
+
+    /**
+     * Sets the UID of the GeoJsonPoint
+     *
+     * @param UID sets the snippet value of the GeoJsonPoint
+     */
+    public void setUID(String UID) {
+        mMarkerOptions.UID(UID);
+        styleChanged();
+    }
+    
+    
 
     /**
      * Gets the title of the GeoJsonPoint
