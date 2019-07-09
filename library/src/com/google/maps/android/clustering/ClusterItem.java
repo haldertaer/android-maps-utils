@@ -37,4 +37,6 @@ public interface ClusterItem {
      * The description of this marker.
      */
     String getSnippet();
+    
+    String getUID();
 }
