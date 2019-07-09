@@ -38,5 +38,5 @@ public interface ClusterItem {
      */
     String getSnippet();
     
-    String getUID();
+    String getTag();
 }
