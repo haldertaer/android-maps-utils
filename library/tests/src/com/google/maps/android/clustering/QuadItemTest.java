@@ -45,6 +45,11 @@ public class QuadItemTest {
         public String getSnippet() {
             return null;
         }
+        
+        @Override
+        public String getUID() {
+            return null;
+        }
     }
 
     public void setUp() {
