@@ -224,21 +224,21 @@ public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
     
     
         /**
-     * Gets the tag of the GeoJsonPoint
+     * Gets the UID of the GeoJsonPoint
      *
-     * @return tag of the GeoJsonPoint
+     * @return UID of the GeoJsonPoint
      */
-    public String getTag() {
-        return mMarkerOptions.getTag();
+    public String getUID() {
+        return mMarkerOptions.getUID();
     }
 
     /**
-     * Sets the tag of the GeoJsonPoint
+     * Sets the UID of the GeoJsonPoint
      *
-     * @param tag sets the snippet value of the GeoJsonPoint
+     * @param UID sets the UID value of the GeoJsonPoint
      */
-    public void setTag(String tag) {
-        mMarkerOptions.tag(tag);
+    public void setUID(String UID) {
+        mMarkerOptions.UID(UID);
         styleChanged();
     }
     
@@ -310,6 +310,7 @@ public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
         markerOptions.rotation(mMarkerOptions.getRotation());
         markerOptions.snippet(mMarkerOptions.getSnippet());
         markerOptions.title(mMarkerOptions.getTitle());
+        markerOptions.UID(mMarkerOptions.getUID());
         markerOptions.visible(mMarkerOptions.isVisible());
         markerOptions.zIndex(mMarkerOptions.getZIndex());
         return markerOptions;
@@ -328,6 +329,7 @@ public class GeoJsonPointStyle extends Style implements GeoJsonStyle {
         sb.append(",\n info window anchor V=").append(getInfoWindowAnchorV());
         sb.append(",\n rotation=").append(getRotation());
         sb.append(",\n snippet=").append(getSnippet());
+        sb.append(",\n UID=").append(getUID());
         sb.append(",\n title=").append(getTitle());
         sb.append(",\n visible=").append(isVisible());
         sb.append(",\n z index=").append(getZIndex());
