@@ -95,6 +95,13 @@ public class GeoJsonPointStyleTest {
     }
 
     @Test
+    public void testUID() throws Exception {
+        pointStyle.setUID("Peaches");
+        Assert.assertEquals("Peaches", pointStyle.getUID());
+        Assert.assertEquals("Peaches", pointStyle.toMarkerOptions().getUID());
+    }
+    
+    @Test
     public void testTitle() throws Exception {
         pointStyle.setTitle("Peaches");
         Assert.assertEquals("Peaches", pointStyle.getTitle());
@@ -120,6 +127,7 @@ public class GeoJsonPointStyleTest {
         Assert.assertEquals(0.5f, pointStyle.getInfoWindowAnchorU(), 0);
         Assert.assertEquals(0.0f, pointStyle.getInfoWindowAnchorV(), 0);
         Assert.assertEquals(0.0f, pointStyle.getRotation(), 0);
+        Assert.assertNull(pointStyle.getUID());
         Assert.assertNull(pointStyle.getSnippet());
         Assert.assertNull(pointStyle.getTitle());
         Assert.assertTrue(pointStyle.isVisible());
@@ -138,6 +146,7 @@ public class GeoJsonPointStyleTest {
         Assert.assertEquals(0.0f, pointStyle.toMarkerOptions().getRotation(), 0);
         Assert.assertNull(pointStyle.toMarkerOptions().getSnippet());
         Assert.assertNull(pointStyle.toMarkerOptions().getTitle());
+        Assert.assertNull(pointStyle.toMarkerOptions().getUID());
         Assert.assertTrue(pointStyle.toMarkerOptions().isVisible());
     }
 
